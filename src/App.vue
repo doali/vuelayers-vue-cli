@@ -1,29 +1,46 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id='application'>
+    <div id='nav'>
+      <router-link to='/map'>Map</router-link>
     </div>
-    <router-view />
+    <router-view/>
   </div>
 </template>
 
 <style lang="less">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+  #application {
+    font-family: "Charcoal", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: rgb(184, 196, 221);
+    background-image: url(~@/assets/bgSatellite.png);
+    min-height: 100vh;
+    margin: 0px;
+  }
+
+  #nav {
+    padding: 9px 0px;
+
+    a {
+      width: 60px;
+      padding: 8px 16px;
+
+      color: #33567f;
+
+      font-weight: bold;
+      font-style: normal;
+      text-decoration: none;
+
+      &.router-link-exact-active {
+        color: #fff;
+      }
+    }
+
+    a:hover {
+      background-color: #555;
+      color: white;
+      border-bottom: #fff solid 1px;
     }
   }
-}
 </style>
